@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Лим — 368436</title>
+  <style>
+    :root{
+      --bg1: #0f1724;
+      --bg2: #0b3a5b;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #0ea5a2;
+      --glass: rgba(255,255,255,0.06);
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(2,6,23,0.6);
+      font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background: linear-gradient(160deg, var(--bg1) 0%, var(--bg2) 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      color:#0b1220;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+      box-sizing:border-box;
+    }
+
+    .card{
+      width:100%;
+      max-width:720px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,250,252,0.98));
+      border-radius:var(--radius);
+      padding:34px;
+      box-shadow:var(--shadow);
+      display:flex;
+      gap:28px;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* decorative accent */
+    .card::before{
+      content:"";
+      position:absolute;
+      right:-120px;
+      top:-60px;
+      width:280px;
+      height:280px;
+      background: radial-gradient(circle at 30% 30%, rgba(14,165,162,0.12), transparent 30%),
+                  linear-gradient(135deg, rgba(14,165,162,0.06), rgba(59,130,246,0.04));
+      transform:rotate(20deg);
+      border-radius:40%;
+      pointer-events:none;
+    }
+
+    .avatar{
+      min-width:120px;
+      min-height:120px;
+      border-radius:14px;
+      background:linear-gradient(180deg,#ffffff,#f3f6fb);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+      box-shadow: 0 6px 18px rgba(11,18,28,0.12), inset 0 -6px 18px rgba(11,18,28,0.02);
+    }
+
+    .avatar .initial{
+      width:86px;
+      height:86px;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:36px;
+      background: linear-gradient(180deg, rgba(14,165,162,1), rgba(59,130,246,1));
+      color:white;
+      box-shadow: 0 8px 20px rgba(14,165,162,0.25);
+    }
+
+    .info{
+      flex:1;
+      min-width:0;
+    }
+
+    h1{
+      margin:0 0 8px 0;
+      font-size:28px;
+      line-height:1.05;
+      color:#071430;
+      letter-spacing:-0.2px;
+    }
+
+    .meta{
+      margin:0 0 20px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .data{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .pill{
+      background:var(--glass);
+      border-radius:12px;
+      padding:10px 14px;
+      font-weight:600;
+      color:#0b1220;
+      box-shadow: 0 2px 8px rgba(2,6,23,0.04);
+      border: 1px solid rgba(11,18,28,0.04);
+      min-width:160px;
+    }
+
+    .label{
+      display:block;
+      font-size:12px;
+      text-transform:uppercase;
+      color:var(--muted);
+      font-weight:700;
+      letter-spacing:0.9px;
+      margin-bottom:6px;
+    }
+
+    @media (max-width:520px){
+      .card{padding:20px;gap:16px}
+      .avatar{min-width:88px;min-height:88px}
+      .avatar .initial{width:64px;height:64px;font-size:28px}
+      h1{font-size:20px}
+      .pill{min-width:140px;padding:8px 12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-labelledby="name-heading">
+      <div class="avatar" aria-hidden="true">
+        <div class="initial">Л</div>
+      </div>
+
+      <div class="info">
+        <h1 id="name-heading">Фамилия: Лим</h1>
+        <p class="meta">Идентификационный номер студента (ИСУ)</p>
+
+        <div class="data" aria-live="polite">
+          <div class="pill" title="ИСУ">368436</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
